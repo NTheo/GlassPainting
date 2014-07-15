@@ -1,8 +1,12 @@
-GlassPainting
+﻿GlassPainting
 =============
 GlassPainting, by Théophile Dalens
 
-This source code is available to illustrate our work "Painting recognition from wearable cameras" (Théophile Dalens, Josef Sivic, Ivan Laptev, Marine Campedel; ENS/INRIA/CNRS UMR 8548 and Télécom ParisTECH). It is written by Théophile Dalens and Jia Li (WTF Public License 2.0), and contains code from OpenCV "face detection" sample (Willow Garage Inc., 3-clause BSD License). It is constituted of 3 parts:
+This source code is available to illustrate our work "Painting recognition from wearable cameras" (Théophile Dalens, Josef Sivic, Ivan Laptev, Marine Campedel; ENS/INRIA/CNRS UMR 8548 and Télécom ParisTECH). It is written by Théophile Dalens and Jia Li (WTF Public License 2.0), and contains code from OpenCV "face detection" sample (Willow Garage Inc., 3-clause BSD License).
+
+This is free software. It comes without any warranty of any kind, to the extent permitted by applicable law.
+
+It is constituted of 3 parts:
 
 1: EvaluateDescriptors. This is made to extract descriptors from images of a database, and eventually compare the accuracy of different descriptors.
 2: Clustering. This is made to compute one or two layers of voabulary for a bag of binaryd descriptors approach
@@ -20,6 +24,6 @@ To run the Google Glass part:
 
 5. Store what you have computed on your Glass, using e.g. the command "adb push..."
 
-6. Connect your glass, compile and run GlassPainting. Swith the boolean "bag" to use the one-to-one approach (bag=false) or the bag of features approach (bag=true).
+6. Connect your glass, compile and run GlassPainting. Swith the boolean "bag" to use the one-to-one approach (bag=false) or the bag of features approach (bag=true). If you set bag to true, expect long loading time at start up (10~15 sec.), during which you will have to tap the touchpad to prevent the Glass from sleeping. After that, tap once to see the keypoints and a second time to perform the retrieval.
 
 Any question or comment? Feel free to contact me, at theophile.dalens*at*gmail.com

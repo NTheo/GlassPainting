@@ -1,0 +1,7 @@
+<?xml version = "1.0" encoding="utf-8"?>
+<trigger command="TEACH_ME_ABOUT">
+	<constraints
+        camera="true"
+        />
+</trigger>
+    

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="fr.ens.di.willow.glasspainting"
+          android:versionCode="21"
+          android:versionName="2.1">
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@drawable/inria"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+
+        <activity android:name="QueryActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="landscape"
+                  android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        <intent-filter>
+            <action android:name=
+                    "com.google.android.glass.action.VOICE_TRIGGER" />
+        </intent-filter>
+        <meta-data android:name="com.google.android.glass.VoiceTrigger"
+            android:resource="@xml/voice_trigger" />
+        </activity>
+    </application>
+
+    <supports-screens android:resizeable="true"
+                      android:smallScreens="true"
+                      android:normalScreens="true"
+                      android:largeScreens="true"
+                      android:anyDensity="true" />
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.front.autofocus" android:required="false"/>
+
+</manifest>
